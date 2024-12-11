@@ -45,7 +45,7 @@ public class MioThread extends Thread {
             if (file.exists()) {
                 out.writeBytes("HTTP/1.1 200 OK\r\n");
                 out.writeBytes("Content-Length: " + file.length() + "\r\n");
-                out.writeBytes("Content-Type: " + risolviTipo(resource) + "\r\n");
+                out.writeBytes("Content-Type: " + risolviTipo(file) + "\r\n");
                 out.writeBytes("\r\n");
                 InputStream input = new FileInputStream(file);
                 byte[] buf = new byte[8192];
@@ -70,8 +70,8 @@ public class MioThread extends Thread {
         }
     }
 
-    private String risolviTipo(String resource){
-        String ext = resource.split("\\.")[1];
+    private String risolviTipo(File file){
+        String ext = file.getName().split("\\.")[1];
         switch (ext) {
             case "png":
                 return "image/png";
@@ -85,6 +85,8 @@ public class MioThread extends Thread {
             case "jpg":
             case "jpeg":
                 return "image/jpeg";
+            case "mp4":
+                return "video/mp4";
             default:
                 return "";
         }

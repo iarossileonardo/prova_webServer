@@ -1,12 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo_nero.png">
+    <title>VoltSpeed -  Elite Motors</title>
 </head>
-<body>
-    Pagina trovata <br><br>
-    <b>EVVIVA</b>
+<body class="bg-black font-testo">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sfondo-navbar sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand dimensioni-testo-navbar" href="#"><img src="./images/logo_nero.png" class="text-black dimensioni-logo">VoltSpeed - Elite Motors</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  I nostri modelli
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./pages/pininfarina.html">Pininfarina Battista</a></li>
+                  <li><a class="dropdown-item" href="./pages/rimac.html">Rimac Nevera</a></li>
+                  <li><a class="dropdown-item" href="./pages/tesla.html">Tesla Roadster</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/registrazione.html">Contattaci per un test drive</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container text-center mt-5">
+        <div class="row">
+          <div class="col-12">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <a href="./pages/pininfarina.html">
+                  <div class="carousel-item active" data-bs-interval="19500">
+                    <video  class="d-block w-100 dimensioni-carousel rounded-4" autoplay loop muted>
+                      <source src="./videos/video_battista.mp4" type="video/mp4">
+                  </video>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Pininfarina Battista</h5>
+                    <p>0-100: 1,86s /  V.Max: 350Km/h</p>
+                  </div>
+                </div></a>
+                <a href="./pages/rimac.html">
+                  <div class="carousel-item" data-bs-interval="19500">
+                    <video  class="d-block w-100 dimensioni-carousel rounded-4" autoplay loop muted>
+                      <source src="./videos/Rimac_Nevera.mp4" type="video/mp4">
+                    </video>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Rimac Nevera</h5>
+                      <p>0-100: 1,85s /  V.Max: 412Km/h</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="./pages/tesla.html">
+                  <div class="carousel-item" data-bs-interval="19500">
+                    <img src="./images/index/tesla.jpg" class="d-block w-100 dimensioni-carousel rounded-4" alt="Tesla Roadster">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Tesla Roadster</h5>
+                      <p>0-100: 1,10s /  V.Max: 400Km/h</p>
+                    </div>
+                  </div>
+                </a>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>              
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 p-3 bg-dark text-light text rounded-4 dimensioni-font">
+            <p class="giustificato">Scoprite l'estasi della <span class="text-warning">velocità</span> e l'eccitazione dell'<span class="text-warning">innovazione</span> mentre prendete il volante delle nostre supercar elettriche di ultima generazione. Immaginatevi seduti dietro il volante, pronti a toccare l'acceleratore e sentire la <span class="text-warning">potenza inarrestabile dell'elettricità</span> che scorre nelle vostre vene mentre vi muovete senza sforzo, lasciando un'eco di sogni ad <span class="text-warning">alta velocità</span> dietro di voi. Ogni angolo sarà una sfida che le macchine accoglieranno con grazia, avvolgendovi in una sensazione di <span class="text-warning">totale controllo</span>, È un'esperienza che va oltre la semplice guida, è una danza tra voi e la macchina. 
+              <br></p>
+              <p class="text-center mt-0"><button type="button" class="btn btn-warning bottone"><a href="./pages/registrazione.html" class="text-black text-decoration-none proprita-hover giustificato">Prenotate ora il vostro test drive</a></button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container text-center mt-5">
+        <div class="row">
+          <div class="col-12 p-3 bg-dark text-light text rounded-4 dimensioni-font">
+            <h1 class="text-warning">Chi siamo?</h1>
+            <p class="giustificato">Siamo appassionati di alta velocità e mobilità sostenibile. Offriamo una <span class="text-warning">selezione unica</span> di supercar elettriche, pensate per appassionati come <span class="text-warning">voi</span>. Il nostro team esperto vi guiderà nella scelta della <span class="text-warning">vostra macchina dei sogni</span>. Siamo fieri di offrire servizi di alta qualità e un centro assistenza <span class="text-warning">specializzato</span>. Scoprite il <span class="text-warning">futuro della guida emozionante</span> nel nostro showroom. Unitevi a noi nella passione per le supercar elettriche.
+              <br></p>
+              <p class="text-center mt-0"><button type="button" class="btn btn-warning bottone"><a href="https://goo.gl/maps/c2vRLds7CZvJxnbq7" target="_blank" class="text-black text-decoration-none proprieta-hover">Venite a visitarci</a></button></p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center text-lg-start bg-dark mt-5">
+        <div class="container d-flex justify-content-center py-5">
+          <a href="https://www.facebook.com" target="_blank">
+            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+              <i class="fab fa-facebook-f"><img src="./images/facebook_logo.png" alt="Facebook" class="dimensioni-link-footer"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+              <i class="fab fa-instagram"><img src="./images/instagram_logo.png" alt="Instagram" class="dimensioni-link-footer"></i>
+            </button>
+          </a>
+          <a href="https://twitter.com/?lang=it" target="_blank">
+            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+              <i class="fab fa-twitter"><img src="./images/twitter_logo.png" alt="Twitter" class="dimensioni-link-footer"></i>
+            </button>
+          </a>
+          <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fit-IT%2F&lang=en&enter_method=mandatory" target="_blank">
+            <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+              <i class="fab fa-youtube"><img src="./images/tiktok_logo.png" alt="Tik Tok" class="dimensioni-link-footer"></i>
+            </button>
+          </a>
+        </div>
+    
+        <div class="text-center text-warning p-3 pb-0 bg-dark">
+          © 2020 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>   
 </body>
 </html>

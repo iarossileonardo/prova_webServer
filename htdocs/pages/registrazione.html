@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo_nero.png">
+    <title>Registrazione</title>
+</head>
+  <body class="bg-black font-testo">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sfondo-navbar sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand dimensioni-testo-navbar" href="../index.html">
+          <img src="../images/logo_nero.png" class="text-black dimensioni-logo">VoltSpeed - Elite Motors</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  I nostri modelli
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./pininfarina.html">Pininfarina Battista</a></li>
+                  <li><a class="dropdown-item" href="./rimac.html">Rimac Nevera</a></li>
+                  <li><a class="dropdown-item" href="#">Tesla Roadster</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contattaci per un test drive</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-12 bg-dark mt-4 rounded-4">
+            <form>
+                <div class="input-group flex-nowrap mt-4">
+                    <input type="text" class="form-control registrazione" placeholder="Nome" aria-label="Username" aria-describedby="addon-wrapping" required>
+                </div>
+
+                <div class="input-group flex-nowrap mt-4">
+                    <input type="text" class="form-control" placeholder="Cognome" aria-label="Username" aria-describedby="addon-wrapping" required>
+                </div>
+
+                <div class="input-group flex-nowrap mt-4">
+                    <input type="email" class="form-control" placeholder="e-mail" aria-label="Username" aria-describedby="addon-wrapping" required>
+                </div>
+
+                <div class="input-group mb-3 mt-4">
+                    <div class="input-group-text">
+                      <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input" required>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Confermo di avere una patente di guida valida" disabled>
+                </div>
+                
+                <label class="text-warning">Data desiderata per il test drive:</label>
+                <br>
+                <input type="date" min="2023-06-02" class="rounded-3 mb-2">
+
+                <br>
+
+                <input type="submit" class="mb-4 rounded-2">
+                <input type="reset" class="mb-4 rounded-2">
+            </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="container text-center mt-4 d-none d-md-block">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card dimensioni-cards bg-dark text-warning" style="width: 100%;">
+              <img src="../images/registrazione/stretta_mano.webp" class="card-img-top p-1 rounded-3" alt="Stretta di mano">
+              <div class="card-body">
+                <p class="card-text">1: Presentati in concessionaria e fai il check-in da telefono</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card dimensioni-cards bg-dark text-warning" style="width: 100%;">
+              <img src="../images/registrazione/strada.jpg" class="card-img-top p-1 rounded-3" alt="Strada">
+              <div class="card-body">
+                <p class="card-text">2: Innamorati delle nostre auto con la prova su strada</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card dimensioni-cards bg-dark text-warning" style="width: 100%;">
+              <img src="../images/registrazione/contrattazione.jpg" class="card-img-top p-1 rounded-3 dimensioni-max-immagine" alt="Contrattazione">
+              <div class="card-body">
+                <p class="card-text">3: Parla con i nostri esperti e crea la tua auto dei sogni</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-lg-start bg-dark mt-5 proprieta-footer">
+      <div class="container d-flex justify-content-center py-5">
+        <a href="https://www.facebook.com">
+          <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+            <i class="fab fa-facebook-f"><img src="../images/facebook_logo.png" alt="Facebook" class="dimensioni-link-footer"></i>
+          </button>
+        </a>
+        <a href="https://www.instagram.com/">
+          <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+            <i class="fab fa-instagram"><img src="../images/instagram_logo.png" alt="Instagram" class="dimensioni-link-footer"></i>
+          </button>
+        </a>
+        <a href="https://twitter.com/?lang=it">
+          <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+            <i class="fab fa-twitter"><img src="../images/twitter_logo.png" alt="Twitter" class="dimensioni-link-footer"></i>
+          </button>
+        </a>
+        <a href="https://www.tiktok.com/login?redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fit-IT%2F&lang=en&enter_method=mandatory">
+          <button type="button" class="btn btn-dark btn-lg btn-floating mx-2 bg-warning">
+            <i class="fab fa-youtube"><img src="../images/tiktok_logo.png" alt="Tik Tok" class="dimensioni-link-footer"></i>
+          </button>
+        </a>
+      </div>
+  
+      <div class="text-center text-warning p-3 pb-0 bg-dark">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+  </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
