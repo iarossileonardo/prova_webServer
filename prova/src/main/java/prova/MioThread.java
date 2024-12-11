@@ -2,6 +2,9 @@ package prova;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
@@ -31,12 +34,18 @@ public class MioThread extends Thread {
             } while (!header.isEmpty());
 
             if ((resource.equals("/")) || (resource.equals("/index.html"))) {
-                String bodyRisposta = "<html><body>Pagina trovata <br><br><b>EVVIVA</b></body></html>";
+                File file = new File("htdocs/index.html");
                 out.writeBytes("HTTP/1.1 200 OK\r\n");
-                out.writeBytes("Content-Length: " + bodyRisposta.length() + "\r\n");
+                out.writeBytes("Content-Length: " + file.length() + "\r\n");
                 out.writeBytes("Content-Type: text/html\r\n");
                 out.writeBytes("\r\n");
-                out.writeBytes(bodyRisposta);
+                InputStream input = new FileInputStream(file);
+                byte[] buf = new byte[8192];
+                int n;
+                while ((n = input.read(buf)) != -1) {
+                    out.write(buf, 0, n);
+                }
+                input.close();
             } else {
                 String bodyRisposta = "<html><body>Sei <b>fuori strada</b></body></html>";
                 out.writeBytes("HTTP/1.1 404 Not found\n");
@@ -45,6 +54,7 @@ public class MioThread extends Thread {
                 out.writeBytes("\n");
                 out.writeBytes(bodyRisposta);
             }
+            s0.close();
         } catch (Exception e) {
             System.out.println("ERRORE");
             e.printStackTrace();
