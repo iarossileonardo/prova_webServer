@@ -50,7 +50,7 @@ public class MioThread extends Thread {
                 InputStream input = new FileInputStream(file);
                 byte[] buf = new byte[8192];
                 int n;
-                while ((n = input.read(buf)) != -1) {
+                while ((n = input.read(buf)) != -1) { //legge i dati e li mette nel buffer, quando i dati sono finiti, rende -1
                     out.write(buf, 0, n);
                 }
                 input.close();   
