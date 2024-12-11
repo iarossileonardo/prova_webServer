@@ -33,11 +33,19 @@ public class MioThread extends Thread {
                 System.out.println(header);
             } while (!header.isEmpty());
 
-            if ((resource.equals("/")) || (resource.equals("/index.html"))) {
-                File file = new File("htdocs/index.html");
+            File file;
+
+            if (resource.equals("/")) {
+                file = new File("htdocs/index.html");
+            }else{
+                file = new File("htdocs/" + resource);
+            }
+
+
+            if (file.exists()) {
                 out.writeBytes("HTTP/1.1 200 OK\r\n");
                 out.writeBytes("Content-Length: " + file.length() + "\r\n");
-                out.writeBytes("Content-Type: text/html\r\n");
+                out.writeBytes("Content-Type: " + risolviTipo(resource) + "\r\n");
                 out.writeBytes("\r\n");
                 InputStream input = new FileInputStream(file);
                 byte[] buf = new byte[8192];
@@ -45,8 +53,9 @@ public class MioThread extends Thread {
                 while ((n = input.read(buf)) != -1) {
                     out.write(buf, 0, n);
                 }
-                input.close();
-            } else {
+                input.close();   
+            }
+            else {
                 String bodyRisposta = "<html><body>Sei <b>fuori strada</b></body></html>";
                 out.writeBytes("HTTP/1.1 404 Not found\n");
                 out.writeBytes("Content-Lenght: " + bodyRisposta.length() + "\n");
@@ -58,6 +67,26 @@ public class MioThread extends Thread {
         } catch (Exception e) {
             System.out.println("ERRORE");
             e.printStackTrace();
+        }
+    }
+
+    private String risolviTipo(String resource){
+        String ext = resource.split("\\.")[1];
+        switch (ext) {
+            case "png":
+                return "image/png";
+            case "html":
+            case "htm":
+                return "text/html";
+            case "css":
+                return "text/css";
+            case "js":
+                return "application/javascript";
+            case "jpg":
+            case "jpeg":
+                return "image/jpeg";
+            default:
+                return "";
         }
     }
 }
