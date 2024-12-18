@@ -35,13 +35,20 @@ public class MioThread extends Thread {
 
             File file;
 
-            if (resource.equals("/")) {
-                file = new File("htdocs/index.html");
-            }else{
-                file = new File("htdocs/" + resource);
+            System.out.println("RISORSA: "+resource);
+
+            if (resource.endsWith("/")) {
+                resource = resource + "index.html";
+            } else if ((!resource.endsWith("/")) && (resource.split("\\.").length == 1)) {
+                System.out.println("BOMBA");
+                out.writeBytes("HTTP/1.1 301 Moved Permanently\n");
+                out.writeBytes("Content-Length: 0\n");
+                out.writeBytes("Location: "+resource+"/\n");
+                out.writeBytes("\r\n");
             }
-
-
+            System.out.println("NUOVARIS: "+resource);
+            file = new File("htdocs/" + resource);
+            
             if (file.exists()) {
                 out.writeBytes("HTTP/1.1 200 OK\r\n");
                 out.writeBytes("Content-Length: " + file.length() + "\r\n");
